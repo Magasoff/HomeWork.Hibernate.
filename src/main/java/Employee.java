@@ -22,13 +22,17 @@ public class Employee {
     @Column(name = "city")
     private int city;
 
-    public Employee() {
-        this.id = this.id;
-        this.first_name = "имя";
+    public Employee(int id, String first_name, String last_name, String gender, int age, int city) {
+        this.id = id;
+        this.first_name = first_name;
         this.last_name = last_name;
-        this.gender = this.gender;
-        this.age = this.age;
-        this.city = this.city;
+        this.gender = gender;
+        this.age = age;
+        this.city = city;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setId(int id) {
